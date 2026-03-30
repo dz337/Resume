@@ -1,39 +1,40 @@
 \section{Projects}
     \resumeSubHeadingListStart
-    
+
       \resumeProjectHeading
-        {\textbf{KnightCore -- FPGA Integration -- 2025 AMD Hardware Competition}}{Apr 2025 -- Aug 2025}
-        {Group Project}
+        {\textbf{KnightCore -- RISC-V SoC}}{Apr 2026 -- Present}
+        {2026 AMD Open Hardware Competition -- Group Project}
         \resumeItemListStart
-          \resumeItem{Solely responsible for integrating custom GPU hardware module onto Red Pitaya Zynq FPGA platform using Vivado block design, connecting Zynq processor, AXI interconnect, BRAM controller/memory, configuring address spaces in the housekeeping region, and generating bitstreams, enabling team to focus exclusively on hardware design.}
-          \resumeItem{Debugged memory-mapped I/O communication issues between ARM processor and FPGA programmable logic, identifying and correcting address mapping errors in shared memory regions to enable successful hardware integration.}
-          \resumeItem{Developed and executed shell script and Python-based validation tests on Red Pitaya to verify register read/write operations and confirm successful processor-to-FPGA communication through memory-mapped interfaces.}
+          \resumeItem{Serving as RTL \& Systems Architect for a heterogeneous robotics control SoC targeting the TUL PYNQ-ZU Zynq UltraScale+ XCZU5EG, designing a custom RV32IM soft-core as the real-time kinematic coprocessor responsible for closed-loop joint control of a 6-DOF robotic arm.}
+          \resumeItem{Implementing a hardware CORDIC coprocessor mapped into the MEM stage and a memory-mapped UART controller with TX/RX FIFO buffering, enabling deterministic trigonometric angle resolution for inverse kinematics and non-blocking serial communication with STS3215 servo motors.}
+          \resumeItem{Designing a tri-BRAM memory architecture with instruction, data, and IPC mailbox blocks wrapped in AXI4-Lite with a combinational address decoder, defining the system memory map as a shared contract to allow all four subteams to develop in parallel without blocking dependencies.}
         \resumeItemListEnd
 
       \resumeProjectHeading
-        {\textbf{IEEE Resume Database Integration}}{Aug 2025 -- Dec 2025}
-        {Group Project}
+        {\textbf{CoreRV -- Personal RISC-V SoC}}{Summer 2025 -- Present}
+        {Solo Project}
         \resumeItemListStart
-          \resumeItem{Developed modular TypeScript/React frontend with 15+ reusable components for IEEE member profile system, implementing dynamic form arrays for education, work experience, projects, and skills with add/remove functionality to connect recruiters with student members.}
-          \resumeItem{Architected form state management using React hooks to handle nested data structures including file uploads, date ranges, and GPA scales across multiple education entries and experience records.}
-          \resumeItem{Built UCF major selection dropdown integrated with comprehensive majors catalog and implemented input validation infrastructure for bio length, URL formats, and required fields.}
+          \resumeItem{Designing a custom RV32IMA soft-core SoC in SystemVerilog targeting the Red Pitaya Stemlab 125-14 FPGA, with the goal of running Doom bare-metal, built around a 5-stage pipeline with full hazard detection, data forwarding, and load-use stall logic.}
+          \resumeItem{Implementing a multi-cycle iterative hardware divider and 3-cycle pipelined multiplier with dedicated FSMs and pipeline stall integration, alongside a Machine-mode CSR subsystem supporting precise trap handling, Writeback-stage exception delivery, and MRET return-from-trap.}
+          \resumeItem{Actively adding dynamic branch prediction, L1 instruction and data caches, UART, a memory-mapped timer, SPI flash, and a framebuffer with HDMI output to complete the SoC peripheral stack.}
         \resumeItemListEnd
-      
+
       \resumeProjectHeading
-        {\textbf{2026 SouthEastCon Robotics Competition}}{Sep 2025 -- Dec 2025}
-        {Group Project}
+        {\textbf{ESP32 Motion Gesture Classifier}}{Mar 2026 -- Present}
+        {Solo Project}
         \resumeItemListStart
-          \resumeItem{Integrated Raspberry Pi 5 into Hardware-in-the-Loop (HIL) system for autonomous robot software development, configuring Docker containers, VSCode remote development, and Cloudflare tunneling to enable collaborative testing environment for 10+ team members.}
-          \resumeItem{Testing micro-ROS packages on Raspberry Pi to validate real-time ROS2 communication protocols, ensuring reliable message passing between embedded systems before hardware integration with FPGA and ESP32 microcontrollers.}
-          \resumeItem{Designing automated startup scripts for Docker container deployment to streamline robot boot process and reduce setup time during competition testing.}
+          \resumeItem{Building an embedded gesture recognition system on an ESP32 DevKit V1 wired to an MPU-6050 6-axis IMU over I2C, writing C++ firmware to stream raw accelerometer and gyroscope data at 77Hz for data collection.}
+          \resumeItem{Training a deep learning classifier in Edge Impulse using Spectral Analysis and Fast Fourier Transform feature extraction to distinguish four motion classes: idle, wave, circle, and thrust, achieving high accuracy on-device.}
+          \resumeItem{Deploying the trained model as a C++ library back onto the ESP32 for fully offline real-time inference, completing a full TinyML pipeline from raw sensor data to edge deployment without cloud dependency.}
         \resumeItemListEnd
-      
+
       \resumeProjectHeading
         {\textbf{4 Cluster PC Home Lab}}{Sep 2025 -- Present}
         {Solo Project}
         \resumeItemListStart
           \resumeItem{Designing and deploying distributed computing infrastructure using 4 Mini PCs configured in a Proxmox High Availability cluster with ZFS replication for self-hosted services, network experimentation, and cybersecurity training.}
-          \resumeItem{Implementing containerized services using Docker and Kubernetes for application deployment, alongside network security tools including Wireshark, Security Onion, and Kali Linux for penetration testing and threat detection.}
+          \resumeItem{Implementing containerized services using Docker and Kubernetes for application deployment, alongside network security tools including Wireshark, Security Onion, and Kali Linux for threat detection.}
           \resumeItem{Configuring network segmentation with VLAN architecture, OPNsense firewall rules, and VPN tunneling through WireGuard to isolate services and implement enterprise-grade security best practices.}
         \resumeItemListEnd
+
     \resumeSubHeadingListEnd
