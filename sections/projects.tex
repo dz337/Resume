@@ -2,12 +2,12 @@
     \resumeSubHeadingListStart
 
       \resumeProjectHeading
-        {\textbf{KnightCore -- RISC-V SoC}}{Feb 2026 -- Present}
-        {2026 AMD Open Hardware Competition -- Group Project}
+        {\textbf{KnightCore -- FPGA Integration -- 2025 AMD Hardware Competition}}{Apr 2025 -- Aug 2025}
+        {Group Project}
         \resumeItemListStart
-          \resumeItem{Serving as RTL \& Systems Architect for a heterogeneous robotics control SoC targeting the TUL PYNQ-ZU Zynq UltraScale+ XCZU5EG, designing a custom RV32IM soft-core as the real-time kinematic coprocessor responsible for closed-loop joint control of a 6-DOF robotic arm.}
-          \resumeItem{Implementing a hardware CORDIC coprocessor mapped into the MEM stage and a memory-mapped UART controller with TX/RX FIFO buffering, enabling deterministic trigonometric angle resolution for inverse kinematics and non-blocking serial communication with STS3215 servo motors.}
-          \resumeItem{Designing a tri-BRAM memory architecture with instruction, data, and IPC mailbox blocks wrapped in AXI4-Lite with a combinational address decoder, defining the system memory map as a shared contract to allow all four subteams to develop in parallel without blocking dependencies.}
+          \resumeItem{Solely responsible for integrating custom GPU hardware module onto Red Pitaya Zynq FPGA platform using Vivado block design, connecting Zynq processor, AXI interconnect, BRAM controller/memory, configuring address spaces in the housekeeping region, and generating bitstreams, enabling team to focus exclusively on hardware design.}
+          \resumeItem{Debugged memory-mapped I/O communication issues between ARM processor and FPGA programmable logic, identifying and correcting address mapping errors in shared memory regions to enable successful hardware integration.}
+          \resumeItem{Developed and executed shell script and Python-based validation tests on Red Pitaya to verify register read/write operations and confirm successful processor-to-FPGA communication through memory-mapped interfaces.}
         \resumeItemListEnd
 
       \resumeProjectHeading
